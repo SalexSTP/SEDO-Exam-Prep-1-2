@@ -15,8 +15,8 @@ pipeline{
         stage("Build project"){
             when {
                 anyOf {
+                    branch "main"
                     branch "feature"
-                    branch "develop"
                 }
             }
             steps{
@@ -26,8 +26,8 @@ pipeline{
         stage("Run tests"){
             when {
                 anyOf {
+                    branch "main"
                     branch "feature"
-                    branch "develop"
                 }
             }
             steps{
